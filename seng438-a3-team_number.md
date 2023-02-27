@@ -2,12 +2,13 @@
 
 **Lab. Report #3 – Code Coverage, Adequacy Criteria and Test Case Correlation**
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group \#: 19              |  
+| ------------------------- |
+| Student Names:            |     
+| Saina Ghasemian-Roudsari  |     
+| Ana Perrone               |     
+| Rachel Dalton             |     
+| Isaiah Lemieux            |
 
 (Note that some labs require individual reports while others require one report
 for each group. Please see each lab document for details.)
