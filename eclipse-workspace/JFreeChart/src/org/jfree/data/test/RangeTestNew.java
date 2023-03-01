@@ -2,6 +2,8 @@ package org.jfree.data.test;
 
 import static org.junit.Assert.*;
 
+import java.security.InvalidParameterException;
+
 import org.jfree.data.Range;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
@@ -393,5 +395,66 @@ public class RangeTestNew{
 		
 		//verify
 		assertEquals(expectedResult, result);
+	}
+	
+	/**
+	 * new tests created for assignment 3
+	 */
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testScaleWithFactorLessThanZero() {
+		//setup
+		final Range testRange = new Range(0, 0);
+		double factor = -1;
+		
+		Range.scale(testRange, factor);
+	}
+	
+	@Test
+	public void testScaleWithFactorGreaterThanZero() {
+		//setup
+		final Range testRange = new Range(10, 20);
+		double factor = 2;
+		Range result = Range.scale(testRange, factor);
+		Range expectedResult = new Range(20, 40);
+		
+		//verify
+		assertEquals(result, expectedResult);
+	}
+	
+	@Test
+	public void testShiftWithTwoParams() {
+		//setup
+		final Range testRange = new Range(5, 7);
+		double delta = -5;
+		Range result = Range.shift(testRange, delta);
+		Range expectedResult = new Range(0, 2);
+		
+		//verify
+		assertEquals(result, expectedResult);
+	}
+	
+	@Test
+	public void testShiftAllowZeroCrossing() {
+		//setup
+		final Range testRange = new Range(-6, -1.5);
+		double delta = 10;
+		Range result = Range.shift(testRange, delta, true);
+		Range expectedResult = new Range(4, 8.5);
+		
+		//verify
+		assertEquals(result, expectedResult);
+	}
+	
+	@Test 
+	public void testShiftWithNoZeroCrossingForNegativeValueAndZeroValue() {
+		//setup
+		final Range testRange = new Range(-9, 0);
+		double delta = 6;
+		Range result = Range.shift(testRange, delta);
+		Range expectedResult = new Range(-3, 6);
+		
+		//verify
+		assertEquals(result, expectedResult);
 	}
 }
