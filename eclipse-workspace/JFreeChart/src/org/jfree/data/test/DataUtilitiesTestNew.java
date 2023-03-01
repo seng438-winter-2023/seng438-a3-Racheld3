@@ -639,7 +639,7 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	
 	//calculateColumnTotal(Values2D, int, int[]) Tests 
 	@Test
-	public void calculateColumnTotalWithThreeParametersForNullValue() {
+	public void calculateColumnTotalWithParametersForNullValue() {
 		// setup
 	    Mockery mockingContext = new Mockery();
 	    final Values2D values = mockingContext.mock(Values2D.class);
@@ -680,6 +680,30 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    assertEquals(0, result, .000000001d);
 	    // tear-down: NONE in this test method
 	}
+	
+	@Test
+	public void calculateRowTotalForAllNullValues() {
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(3));
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	            one(values).getValue(0, 1);
+	            will(returnValue(null));
+	            one(values).getValue(0, 2);
+	            will(returnValue(null));
+	        }
+	    });
+	    double result = DataUtilities.calculateRowTotal(values, 0);
+	    // verify
+	    assertEquals(0.0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
+	
 	
 	//calculateRowTotal(Values2D, int, int[]) Tests
 	@Test
