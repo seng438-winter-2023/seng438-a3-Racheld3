@@ -21,6 +21,23 @@ DataUtilities.calculateColumnTotal:
 Data flow graph:
 
 Def-use sets per statement:
+DEF(123) := {data, column}, USE(123) := {}
+DEF(124) := {}, USE(124) := {data}
+DEF(125) := {total}, USE(125) := {}
+DEF(126) := {rowCount}, USE(126) := {data}
+DEF(127) := {r}, USE(127) := {r, rowCount}
+DEF(128) := {n}, USE(128) := {data, r, column}
+DEF(129) := {}, USE(129) := {n}
+DEF(130) := {}, USE(130) := {total, n}
+DEF(131) := {}, USE(131) := {}
+DEF(132) := {}, USE(132) := {}
+DEF(133) := {r2}, USE(133) := {r2, rowCount}
+DEF(134) := {n}, USE(134) := {data, r2, column}
+DEF(135) := {}, USE(135) := {n}
+DEF(136) := {}, USE(136) := {total, n}
+DEF(137) := {}, USE(137) := {}
+DEF(138) := {}, USE(138) := {}
+DEF(139) := {}, USE(139) := {total}
 
 All DU-pairs per variable:
 
@@ -43,6 +60,16 @@ Range.combine:
 Data flow graph:
 
 Def-use sets per statement:
+DEF(238) := {range1, range2}, USE(238) := {}
+DEF(239) := {}, USE(239) := {range1}
+DEF(240) := {}, USE(240) := {range2}
+DEF(241) := {}, USE(241) := {}
+DEF(242) := {}, USE(242) := {range2}
+DEF(243) := {}, USE(243) := {range1}
+DEF(244) := {}, USE(244) := {}
+DEF(245) := {l}, USE(245) := {range1, range2}
+DEF(246) := {u}, USE(246) := {range1, range2}
+DEF(247) := {}, USE(247) := {l, u}
 
 All DU-pairs per variable:
 
