@@ -14,17 +14,45 @@
 for each group. Please see each lab document for details.)
 
 # 1 Introduction
-
-Text…
+In this lab our group was introduced to application of white-box testing.
 
 # 2 Manual data-flow coverage calculations for X and Y methods
+DataUtilities.calculateColumnTotal:
+Data flow graph:
 
-Text…
+Def-use sets per statement:
 
+All DU-pairs per variable:
 
-list all DU-pairs per variable:
 calculateColumnTotal:
-du()
+du(1, 1, data) = {1}
+du(1, 3, data) = {1, 2, 3}
+du(1, 5, data) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
+du(1, 5, column) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
+
+
+For each test case show which pairs are covered:
+
+
+Calculate the DU-Pair coverage:
+
+--------------------------------------------------------------------------
+
+Range.combine:
+
+Data flow graph:
+
+Def-use sets per statement:
+
+All DU-pairs per variable:
+
+calculateColumnTotal:
+du(1, 1, data) = 
+
+For each test case show which pairs are covered:
+
+
+Calculate the DU-Pair coverage:
 
 # 3 A detailed description of the testing strategy for the new unit test
 
