@@ -497,4 +497,101 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	}
 	
 	//NEW UNIT TESTS FOR ASSIGNMENT 3
+	//Equal Tests
+	@Test
+	public void testTwoEqualNullArrays() {
+		double[][] testArray1 = null;
+		double[][] testArray2 = null;
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(result);
+		}
+	
+	@Test
+	public void testTwoEqualArraysEqual() {
+		double[][] testArray1 = {{1,2}};
+		double[][] testArray2 = {{1,2}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(result);
+		}
+	
+	@Test
+	public void testFirstArrayIsNull() {
+		double[][] testArray1 = null;
+		double testArray2[][] = {{1,2,3}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+		}
+	
+	@Test
+	public void testSecondArrayIsNull() {
+		double[][] testArray1 = {{1,2,3,4,5,6,7}};
+		double testArray2[][] = null;
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+		}
+	
+	@Test
+	public void testBothArraysNotNullButNotEqual() {
+		double testArray1[][] = {{1,2,3,4,5,6}};
+		double testArray2[][] = {{1,2,3}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+		}
+	
+	@Test
+	public void testTwoEmptyArrays() {
+		double testArray1[][] = {};
+		double testArray2[][] = {};
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(result);
+		
+	}
+	
+	@Test
+	public void testBothArraysNotNullAndNotEqualAndDifferentLengths() {
+		double testArray1[][] = {{1,2,3,4,5,6}};
+		double testArray2[][] = {{1,2,3},{8,9}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+	}
+	
+	//Clone Tests
+	@Test
+	public void testCloneArrayWithFullArray() {
+		double[][] testArray1 = {{1,2,3,4,5,6}, {8,9}};
+		double[][] actualclonedArray1 = DataUtilities.clone(testArray1);
+		assertArrayEquals(testArray1, actualclonedArray1);
+	}
+	
+	
+	@Test
+	public void testCloneArrayWithEmptyArray() {
+		double[][] testArray1 = {{}};
+		double[][] actualclonedArray1 = DataUtilities.clone(testArray1);
+		assertArrayEquals(testArray1, actualclonedArray1);
+	}
+	
+	@Test
+	public void testCloneArrayWithOneArrayNull() {
+		double[][] testArray1 = {{1,2,3,4}, {6,8}, null};
+		double[][] actualclonedArray1 = DataUtilities.clone(testArray1);
+		assertArrayEquals(testArray1, actualclonedArray1);
+	}
+	
+	
+	
+	
 }

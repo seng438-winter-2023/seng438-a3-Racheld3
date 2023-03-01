@@ -495,4 +495,5 @@ public class DataUtilitiesTest extends DataUtilities {
 		assertArrayEquals(expectedResult, actualResult);
 		
 	}
+	
 }

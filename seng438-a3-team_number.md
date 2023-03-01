@@ -62,13 +62,13 @@ We created a test plan which is in our github for planning the unit tests requir
 Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
-Initial Coverage for Statement Coverage on DataUtilities:
+Initial Coverage for Statement Coverage on DataUtilities is 48.7%:
 <img width="866" alt="Screenshot 2023-03-01 at 10 21 27 AM" src="https://user-images.githubusercontent.com/76859857/222215570-36372536-635b-4cb6-b4d1-be48f921d4de.png">
 
-Initial Coverage for Branch Coverage on DataUtilities:
+Initial Coverage for Branch Coverage on DataUtilities is 29.7%:
 <img width="886" alt="Screenshot 2023-03-01 at 10 37 27 AM" src="https://user-images.githubusercontent.com/76859857/222219008-1e5d6661-22db-44cf-9b13-dfccac74e6bd.png">
 
-Initial Coverage for Condition Coverage on DataUtilities:
+Initial Coverage for Method Coverage on DataUtilities is 60%:
 <img width="827" alt="Screenshot 2023-03-01 at 10 41 57 AM" src="https://user-images.githubusercontent.com/76859857/222219497-799e5893-304f-4225-b087-9a427a6c1771.png">
 
 
