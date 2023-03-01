@@ -21,6 +21,11 @@ Text…
 
 Text…
 
+
+list all DU-pairs per variable:
+calculateColumnTotal:
+du()
+
 # 3 A detailed description of the testing strategy for the new unit test
 
 Text…
