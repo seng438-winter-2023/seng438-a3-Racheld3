@@ -613,6 +613,51 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    // tear-down: NONE in this test method
 	}
 	
+	@Test
+	public void calculateColumnTotalForNewException() {
+		// setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1));
+	            one(values).getValue(0, 0);
+	            will(returnValue(1.0));
+	     
+	            
+	        }
+	    });
+	    double result = DataUtilities.calculateColumnTotal(values, 0);
+	    // verify
+	    assertEquals(1.0, result, .000000001d);
+	    // tear-down: NONE in this test method
+		
+	}
+	
+	
+	
+	//calculateColumnTotal(Values2D, int, int[]) Tests 
+	@Test
+	public void calculateColumnTotalWithThreeParametersForNullValue() {
+		// setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    int[] value = {0};
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	        }
+	    });
+	    // verify
+	    assertEquals(0, DataUtilities.calculateColumnTotal(values, 0, value), .000000001d);
+	    // tear-down: NONE in this test method
+		
+	}
+	
 	
 	
 	//calculateRowTotal(Values2D, int) Tests
@@ -636,5 +681,67 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    // tear-down: NONE in this test method
 	}
 	
+	//calculateRowTotal(Values2D, int, int[]) Tests
+	@Test
+	public void calculateRowTotalWithThreeParametersForNullValue() {
+		// setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    int[] value = {0};
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	        }
+	    });
+	    // verify
+	    assertEquals(0, DataUtilities.calculateRowTotal(values, 0, value), .000000001d);
+	    // tear-down: NONE in this test method
+		
+	}
 	
+	
+	
+	//calculate getCumulativePercentages()
+	@Test
+	public void getCumlativePercentagesForNullValue() {
+		Mockery mockingContext = new Mockery();
+		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
+		mockingContext.checking(new Expectations() {
+			{
+				allowing(inputValues).getItemCount();
+				will(returnValue(3));
+				
+				allowing(inputValues).getKey(0);
+				will(returnValue(0));
+				
+				allowing(inputValues).getKey(1);
+				will(returnValue(1));
+				
+				allowing(inputValues).getKey(2);
+				will(returnValue(2));
+				
+				//key of 0 giving value 5
+				allowing(inputValues).getValue(0);
+				will(returnValue(null));
+				
+				//key of 1 giving value 9
+				allowing(inputValues).getValue(1);
+				will(returnValue(9.0));
+			
+				//value of -2 giving key 2
+				allowing(inputValues).getValue(2);
+				will(returnValue(12));
+				
+				
+			}	
+		});
+		
+		
+		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
+		
+		assertEquals(0.0, result.getValue(0).doubleValue(), 0.000000001d);
+	}
 }
