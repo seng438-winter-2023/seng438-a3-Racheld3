@@ -704,6 +704,23 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    // tear-down: NONE in this test method
 	}
 	
+	@Test
+	public void calculateRowTotalWithNegativeColumn() {
+		 // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(-1));
+	        }
+	    });
+	    double result = DataUtilities.calculateRowTotal(values, 0);
+	    // verify
+	    assertEquals(0.0, result, 0.0);
+	    // tear-down: NONE in this test method
+	}
+	
 	
 	//calculateRowTotal(Values2D, int, int[]) Tests
 	@Test
@@ -723,7 +740,6 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    // verify
 	    assertEquals(0, DataUtilities.calculateRowTotal(values, 0, value), .000000001d);
 	    // tear-down: NONE in this test method
-		
 	}
 	
 	
