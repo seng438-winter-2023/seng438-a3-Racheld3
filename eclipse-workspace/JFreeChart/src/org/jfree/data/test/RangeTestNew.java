@@ -8,7 +8,7 @@ import org.jmock.Mockery;
 import org.jmock.lib.legacy.ClassImposteriser;
 import org.junit.Test;
 
-public class RangeWBTest{
+public class RangeTestNew{
 
 	/**
 	 * getLowerBound() tests
