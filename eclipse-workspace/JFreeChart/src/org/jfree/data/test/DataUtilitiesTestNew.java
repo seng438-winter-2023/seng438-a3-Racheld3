@@ -592,6 +592,49 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	}
 	
 	
+	//calculateColumnTotal(Values2D,int) Tests 
+	@Test
+	public void calculateColumnTotalForNullValue()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	        }
+	    });
+	    double result = DataUtilities.calculateColumnTotal(values, 0);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
+	
+	
+	
+	//calculateRowTotal(Values2D, int) Tests
+	@Test
+	public void calculateRowTotalForNullValue()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	        }
+	    });
+	    double result = DataUtilities.calculateRowTotal(values, 0);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
 	
 	
 }
