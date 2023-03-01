@@ -62,8 +62,9 @@ We created a test plan which is in our github for planning the unit tests requir
 Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
+Initial Coverage Statement Coverage on DataUtilities:
 
-Text…
+
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
