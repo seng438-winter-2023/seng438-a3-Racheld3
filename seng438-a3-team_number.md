@@ -63,6 +63,7 @@ Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 Initial Coverage Statement Coverage on DataUtilities:
+<img width="866" alt="Screenshot 2023-03-01 at 10 21 27 AM" src="https://user-images.githubusercontent.com/76859857/222215570-36372536-635b-4cb6-b4d1-be48f921d4de.png">
 
 
 
