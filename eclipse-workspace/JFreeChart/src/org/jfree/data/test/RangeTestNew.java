@@ -457,4 +457,9 @@ public class RangeTestNew{
 		//verify
 		assertEquals(result, expectedResult);
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testRangeConstructorWithLowerLessThanUpper() {
+		final Range testRange = new Range(5, 1);
+	}
 }
