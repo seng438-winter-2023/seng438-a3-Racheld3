@@ -36,7 +36,7 @@ For each test case show which pairs are covered:
 
 Calculate the DU-Pair coverage:
 
---------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
 Range.combine:
 
@@ -55,8 +55,7 @@ For each test case show which pairs are covered:
 Calculate the DU-Pair coverage:
 
 # 3 A detailed description of the testing strategy for the new unit test
-
-Text…
+We created a test plan which is in our github for planning the unit tests required, as with any testing to be done, to begin with, a plan must be created. After writing the unit tests for each method we used EclEmma to view the instruction, branch, and method coverages. Since we did do paired testing we also got the other pair to review eachothers tests. We kept reviewing tests and making changes until we were at a coverage which we felt was excelent.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
