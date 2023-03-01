@@ -10,7 +10,7 @@ The objective of creating these new unit tests is to increase their code coverag
 From org.jfree.data.DataUtilities the following methods will be tested:
 - equals 
 - clone
-- calculateColumnTotal
+- calculateColumnTotal 
 - calculateRowTotal
 - createNumberArray
 - getCumulativePercentages
