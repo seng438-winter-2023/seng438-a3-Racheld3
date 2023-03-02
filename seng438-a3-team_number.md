@@ -108,13 +108,10 @@ Text…
 Text…
 
 # 8 A discussion on how the team work/effort was divided and managed
-
-Text…
+We divided the manual measure data flow calculations (section 2 of report) by assigning each section of the requirments from the lab handout to one team member then getting other team members to check each others work after completion. We also divided writing unit tests for the test suite development section by Saina to write the org.jfree.data.DataUtilities tests to reach the minimum coverages required, and Rachel, Isaiah and Ana to write the org.jfree.data.Range tests to reach the minimum coverages. Then we swapped and checked over eachother work and as well helped eachother through challenges faced. As well, upon completion of the tests, we helped eachother review the tests, looking for any inconsistencies or defects in the tests.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
-
-Text…
+We realized as we began the creating unit test process that we had to re think our original strategy of splitting into pairs to complete org.jfree.data.DataUtilities and org.jfree.data.Range unit tests. Since Range had much more methods then DataUtilities. We found it best that one member tackle DataUtilities and get other team members to help when required and the other three memebers focus on Range methods.
 
 # 10 Comments/feedback on the lab itself
-
-Text…
+This lab was a great way for us to expand our knowledge and apply what we have learned in class about white-box testing. It was very beneficial for us to use a coverage tool (EclEmma) and see how that worked when unit testing. Using Branch coverage really showed us how we could better write more detailed unit test to test flaws in the program we may not have recognized without using a coverage tool.
