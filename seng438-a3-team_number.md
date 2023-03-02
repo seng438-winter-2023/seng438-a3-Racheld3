@@ -10,14 +10,13 @@
 | Rachel Dalton             |     
 | Isaiah Lemieux            |
 
-(Note that some labs require individual reports while others require one report
-for each group. Please see each lab document for details.)
-
 # 1 Introduction
 In this lab our group was introduced to application of white-box testing.
 
 # 2 Manual data-flow coverage calculations for X and Y methods
-DataUtilities.calculateColumnTotal:
+
+DataUtilities.calculateColumnTotal
+---------------------------------------
 Data flow graph:
 
 Def-use sets per statement:
@@ -55,8 +54,8 @@ Calculate the DU-Pair coverage:
 
 ---------------------------------------------------------------------------------------
 
-Range.combine:
-
+Range.combine
+-----------------------------------------
 Data flow graph:
 
 Def-use sets per statement:
