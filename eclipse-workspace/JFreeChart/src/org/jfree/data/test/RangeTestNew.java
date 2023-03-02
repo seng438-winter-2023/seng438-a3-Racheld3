@@ -462,4 +462,280 @@ public class RangeTestNew{
 	public void testRangeConstructorWithLowerLessThanUpper() {
 		final Range testRange = new Range(5, 1);
 	}
+
+//Tests for combine(Range, Range)
+
+@Test
+public void testCombineWithFirstRangeNull() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	Range result = Range.combine(null, testRange);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineWithSecondRangeNull() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	Range result = Range.combine(testRange, null);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineWithTwoRanges() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(1, 10);
+	Range result = Range.combine(testRange, testRange2);
+	Range expectedResult = new Range(-3, 10);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+//Tests for combineIgnoringNaN(Range, Range)
+@Test
+public void testCombineIgnoringNaNWithFirstRangeNaN() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(Double.NaN, Double.NaN);
+	Range result = Range.combineIgnoringNaN(testRange2, testRange);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithSecondRangeNaN() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(Double.NaN, Double.NaN);
+	Range result = Range.combineIgnoringNaN(testRange, testRange2);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithTwoRanges() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(1, 10);
+	Range result = Range.combineIgnoringNaN(testRange, testRange2);
+	Range expectedResult = new Range(-3, 10);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithTwoNaNRanges() {
+	
+	//setup
+	final Range testRange = new Range(Double.NaN, Double.NaN);
+	final Range testRange2 = new Range(Double.NaN, Double.NaN);
+	Range result = Range.combineIgnoringNaN(testRange, testRange2);
+	Range expectedResult = null;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithTwoNullRanges() {
+	
+	//setup
+	Range result = Range.combineIgnoringNaN(null, null);
+	Range expectedResult = null;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithFirstRangeNull() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	Range result = Range.combineIgnoringNaN(null, testRange);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithSecondRangeNull() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	Range result = Range.combineIgnoringNaN(testRange, null);
+	Range expectedResult = new Range(-3, 7);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithFirstRangeNaNSecondRangeNull() {
+	
+	//setup
+	final Range testRange = new Range(Double.NaN, Double.NaN);
+	Range result = Range.combineIgnoringNaN(testRange, null);
+	Range expectedResult = null;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testCombineIgnoringNaNWithFirstRangeNullSecondRangeNaN() {
+	
+	//setup
+	final Range testRange = new Range(Double.NaN, Double.NaN);
+	Range result = Range.combineIgnoringNaN(null, testRange);
+	Range expectedResult = null;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+//Tests for constrain(double)
+
+@Test
+public void testConstrainLowerValueNotContained() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	double result = testRange.constrain(-4.8);
+	double expectedResult = -3;
+	
+	//verify
+	assertEquals(expectedResult, result, 0.000001);
+	
+	}
+
+@Test
+public void testConstrainUpperValueNotContained() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	double result = testRange.constrain(48);
+	double expectedResult = 7;
+	
+	//verify
+	assertEquals(expectedResult, result, 0.000001);
+	
+	}
+
+@Test
+public void testConstrainValueContained() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	double result = testRange.constrain(0);
+	double expectedResult = 0;
+	
+	//verify
+	assertEquals(expectedResult, result, 0.000001);
+	
+	}
+
+//Tests for Equals(Object)
+@Test
+public void testEqualsObjectNotRange() {
+	
+	//setup
+	final Object testObject = new Object();
+	final Range testRange = new Range(-3, 7);
+	boolean result = testRange.equals(testObject);
+	boolean expectedResult = false;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testEqualsLowerBoundNotEqual() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(-7, 7);
+	boolean result = testRange.equals(testRange2);
+	boolean expectedResult = false;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testEqualsUpperBoundNotEqual() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(-3, 0);
+	boolean result = testRange.equals(testRange2);
+	boolean expectedResult = false;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testEqualsRangeEqual() {
+	
+	//setup
+	final Range testRange = new Range(-3, 7);
+	final Range testRange2 = new Range(-3, 7);
+	boolean result = testRange.equals(testRange2);
+	boolean expectedResult = true;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+//Tests for hashCode()
+
+@Test
+public void testHashCode() {
+	
+	//setup
+	final Range testRange = new Range(0, 0);
+	int result = testRange.hashCode();
+	int expectedResult = 0;
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
 }
