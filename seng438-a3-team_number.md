@@ -39,12 +39,10 @@ Def-use sets per statement:
 - DEF(139) := {}, USE(139) := {total}
 
 All DU-pairs per variable:
-
-calculateColumnTotal:
-du(1, 1, data) = {1}
-du(1, 3, data) = {1, 2, 3}
-du(1, 5, data) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
-du(1, 5, column) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
+- du(1, 1, data) = {1}
+- du(1, 3, data) = {1, 2, 3}
+- du(1, 5, data) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
+- du(1, 5, column) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
 
 
 For each test case show which pairs are covered:
@@ -58,21 +56,20 @@ Range.combine
 Data flow graph:
 
 Def-use sets per statement:
-DEF(238) := {range1, range2}, USE(238) := {}
-DEF(239) := {}, USE(239) := {range1}
-DEF(240) := {}, USE(240) := {range2}
-DEF(241) := {}, USE(241) := {}
-DEF(242) := {}, USE(242) := {range2}
-DEF(243) := {}, USE(243) := {range1}
-DEF(244) := {}, USE(244) := {}
-DEF(245) := {l}, USE(245) := {range1, range2}
-DEF(246) := {u}, USE(246) := {range1, range2}
-DEF(247) := {}, USE(247) := {l, u}
+- DEF(238) := {range1, range2}, USE(238) := {}
+- DEF(239) := {}, USE(239) := {range1}
+- DEF(240) := {}, USE(240) := {range2}
+- DEF(241) := {}, USE(241) := {}
+- DEF(242) := {}, USE(242) := {range2}
+- DEF(243) := {}, USE(243) := {range1}
+- DEF(244) := {}, USE(244) := {}
+- DEF(245) := {l}, USE(245) := {range1, range2}
+- DEF(246) := {u}, USE(246) := {range1, range2}
+- DEF(247) := {}, USE(247) := {l, u}
 
 All DU-pairs per variable:
 
-calculateColumnTotal:
-du(1, 1, data) = 
+
 
 For each test case show which pairs are covered:
 
@@ -87,6 +84,8 @@ We created a test plan which is in our github for planning the unit tests requir
 Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
+DataUtilities Initial Coverage
+------------------------------------------------------------------------------
 Initial Coverage for Statement Coverage on DataUtilities is 48.7%:
 <img width="866" alt="Screenshot 2023-03-01 at 10 21 27 AM" src="https://user-images.githubusercontent.com/76859857/222215570-36372536-635b-4cb6-b4d1-be48f921d4de.png">
 
@@ -95,6 +94,11 @@ Initial Coverage for Branch Coverage on DataUtilities is 29.7%:
 
 Initial Coverage for Method Coverage on DataUtilities is 60%:
 <img width="827" alt="Screenshot 2023-03-01 at 10 41 57 AM" src="https://user-images.githubusercontent.com/76859857/222219497-799e5893-304f-4225-b087-9a427a6c1771.png">
+
+DataUtilities Coverage Achieved
+--------------------------------------------------------------------------
+
+
 
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
