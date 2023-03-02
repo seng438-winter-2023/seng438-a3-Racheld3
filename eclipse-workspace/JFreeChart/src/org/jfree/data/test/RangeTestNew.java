@@ -738,4 +738,147 @@ public void testHashCode() {
 	assertEquals(expectedResult, result);
 	
 	}
+
+//Tests for expand()
+@Test
+public void testExpandSameLowerAndUpper() {
+	
+	
+	//setup
+	final Range testRange = new Range(4,10);
+	double lower = 0.5;
+	double upper = 0.5;
+	Range result = Range.expand(testRange, lower, upper);
+	Range expectedResult = new Range(1,13);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testExpand() {
+	
+	
+	//setup
+	final Range testRange = new Range(4,10);
+	double lower = 0.5;
+	double upper = -2.0;
+	Range result = Range.expand(testRange, lower, upper);
+	Range expectedResult = new Range(1,-2);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+//Tests for expandToInclude()
+@Test
+public void testExpandToIncludeUpper() {
+	
+	
+	//setup
+	final Range testRange = new Range(4,10);
+	Range result = Range.expandToInclude(testRange, 0);
+	Range expectedResult = new Range(0,10);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+@Test
+public void testExpandToIncludeLower() {
+	
+	
+	//setup
+	final Range testRange = new Range(4,10);
+	Range result = Range.expandToInclude(testRange, 15);
+	Range expectedResult = new Range(4,15);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+@Test
+public void testExpandToIncludeNULL() {
+	
+	
+	//setup
+	final Range testRange = null;
+	Range result = Range.expandToInclude(testRange, 15);
+	Range expectedResult = new Range(15,15);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
+//Tests for intersects()
+@Test
+public void testIntersectsWithRangeParam() {
+	
+	//setup 
+	final Range testRange = new Range(1,4);
+	final Range testRange2 = new Range(2,3);
+	boolean result = testRange2.intersects(testRange);
+	boolean expected = true;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+@Test
+public void testIntersectsWithValidBoundParams() {
+	
+	//setup 
+	final Range testRange = new Range(1,4);
+	boolean result = testRange.intersects(2,3);
+	boolean expected = true;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+@Test
+public void testIntersectsWithInvalidBoundParams() {
+	
+	//setup 
+	final Range testRange = new Range(1,4);
+	boolean result = testRange.intersects(5,6);
+	boolean expected = false;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+//Tests for isNaNRange
+@Test
+public void testIsNaNRange() {
+	
+	//setup
+	final Range testRange =new Range(Double.NaN, Double.NaN);
+	//verify
+	boolean result = testRange.isNaNRange();
+	boolean expected = true;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+//Tests for toString()
+@Test
+public void testToString() {
+	
+	
+	//setup
+	final Range testRange = new Range(4,10);
+	String result = testRange.toString();
+	String expectedResult = new String("Range[4,10]");
+	
+	//verify
+	assertTrue(expectedResult.equals(result));
+	
+	}
+
 }
