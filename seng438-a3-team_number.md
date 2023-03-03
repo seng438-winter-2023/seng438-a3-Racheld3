@@ -11,7 +11,7 @@
 | Isaiah Lemieux            |
 
 # 1 Introduction
-In this lab our group was introduced to application of white-box testing.
+This lab gave us our third opportunity to review and apply the different concepts and practices we have been covering in lectures, in once again, a very hands-on and interactive approach. Our goal was to continue using unit testing, but now building off of the tests created in Assignment 2 for the JFreeChart System. As we were given the code for each of the methods to be tested, this enabled us to use the white-box coverage criteria technique. This lab allowed us to gain exposure to code coverage tools in order to measure test adequacy all while designing test cases that would improve the coverage of our code.
 
 # 2 Manual data-flow coverage calculations for X and Y methods
 
@@ -154,6 +154,8 @@ This test case was designed to improve the testing for the method Equals in Data
 Range.constrain: Test case - testConstrainLowerValueNotContained()
 This test case improved coverage for the constrain() method in Range. Prior to writing this test case, the statement, branch and method coverages were 0%. The test case tested the constrain method when the value to be constrained is less than the lower bound of the range. This test case alone increased the statement coverage to 84.0%, branch coverage to 50%, and method coverage to 100%. We used the coverage information to write two additional test cases to bring the coverage to 100% in every category.   
 
+Range.expandToInclude: Test Case - testExpandToIncludeUpper()
+This test case significantly improved the coverage of the test for the expandtoInclude method inside of Range. Prior to writing this test case the statement/instruction, branch and method coverages were all at 0%, as this method was not tested in the previous assignment. This test case creates a range and calls the expandToInclude method with a value higher than the range. This will test that the method accurately expands the upper bound of the given range. Doing this greatly improved the coverage as this test uses a value which will cause the method to go through the first two conditional statements of the method before entering the third conditional statement: else if (value > range.getUpperBound()). This test increases the statement coverage to 55.9%, the branch coverage to 50.0% and lastly the method coverage to 100%. After this test case was created by testing the other conditions in the method we were able to achieve 100% coverage in all categories.
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 DataUtilities Initial Coverage

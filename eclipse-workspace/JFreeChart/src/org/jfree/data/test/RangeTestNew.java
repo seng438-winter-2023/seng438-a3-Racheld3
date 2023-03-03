@@ -781,7 +781,7 @@ public class RangeTestNew{
 	
 	//Tests for expandToInclude()
 	@Test
-	public void testExpandToIncludeUpper() {
+	public void testExpandToIncludeLower() {
 		
 		
 		//setup
@@ -794,7 +794,7 @@ public class RangeTestNew{
 		
 		}
 	@Test
-	public void testExpandToIncludeLower() {
+	public void testExpandToIncludeUpper() {
 		
 		
 		//setup
