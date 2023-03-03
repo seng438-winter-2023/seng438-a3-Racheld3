@@ -154,7 +154,13 @@ DataUtilites.equals: Test Case- testTwoEqualArraysEqual()
 This test case was designed to improve the testing for the method Equals in DataUtilities. Prior to writing this test the statement and branch coverage was 0%. But after writing just that one test branch coverage improved to 50%. This test case check the loop if (a.length != b.length) to see if the arrays had equal length, by going into this loop we were able to improve the coverage.
 
 Range.constrain: Test case - testConstrainLowerValueNotContained()
-This test case improved coverage for the constrain() method in Range. Prior to writing this test case, the statement, branch and method coverages were 0%. The test case tested the constrain method when the value to be constrained is less than the lower bound of the range. This test case alone increased the statement coverage to 84.0%, branch coverage to 50%, and method coverage to 100%. We used the coverage information to write two additional test cases to bring the coverage to 100% in every category.   
+This test case improved coverage for the constrain() method in Range. Prior to writing this test case, the statement, branch and method coverages were 0%. The test case tested the constrain method when the value to be constrained is less than the lower bound of the range. This test case alone increased the statement coverage to 84.0%, branch coverage to 50%, and method coverage to 100%. We used the coverage information to write two additional test cases to bring the coverage to 100% in every category. 
+
+Range.shift: Test case - testScaleWithFactorGreaterThanZero()
+This test case addresses the coverage for the scale() method. Prior to writing this test the statement, branch and method coverage for this method were all at 0%. After writing this test and running the new test suite, this coverage was increased to 79.2%, 50% and 100% for statement, branch and method coverage, respectively. Additional test cases were created in order to increase these coverage measures enough to meet assignment requirements.
+
+Range.scale: Test case - testShiftWithTwoParams()
+This test cased improved coverage for the shift(Range base, double delta, boolean allowZeroCrossing) method. Prior to writing this test the statement, branch and method coverage for this method were all at 0%. After writing this test and running the updated test suite, this coverage was increased to 58.6%, 50% and 100% for statement, branch and method coverage, respectively. Additional test cases were created in order to increase these coverage measures enough to meet assignment requirements.
 
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
