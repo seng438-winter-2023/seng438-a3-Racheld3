@@ -162,6 +162,9 @@ This test case addresses the coverage for the scale() method. Prior to writing t
 Range.scale: Test case - testShiftWithTwoParams()
 This test cased improved coverage for the shift(Range base, double delta, boolean allowZeroCrossing) method. Prior to writing this test the statement, branch and method coverage for this method were all at 0%. After writing this test and running the updated test suite, this coverage was increased to 58.6%, 50% and 100% for statement, branch and method coverage, respectively. Additional test cases were created in order to increase these coverage measures enough to meet assignment requirements.
 
+Range.expandToInclude: Test Case - testExpandToIncludeUpper()
+This test case significantly improved the coverage of the test for the expandtoInclude method inside of Range. Prior to writing this test case the statement/instruction, branch and method coverages were all at 0%, as this method was not tested in the previous assignment. This test case creates a range and calls the expandToInclude method with a value higher than the range. This will test that the method accurately expands the upper bound of the given range. Doing this greatly improved the coverage as this test uses a value which will cause the method to go through the first two conditional statements of the method before entering the third conditional statement: else if (value > range.getUpperBound()). This test increases the statement coverage to 55.9%, the branch coverage to 50.0% and lastly the method coverage to 100%. After this test case was created by testing the other conditions in the method we were able to achieve 100% coverage in all categories.
+
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 DataUtilities Initial Coverage
