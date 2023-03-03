@@ -813,6 +813,20 @@ public void testExpandToIncludeNULL() {
 	
 	}
 
+@Test
+public void testExpandToIncludeAllSame() {
+	
+	
+	//setup
+	final Range testRange = new Range(15,15);
+	Range result = Range.expandToInclude(testRange, 15);
+	Range expectedResult = new Range(15,15);
+	
+	//verify
+	assertEquals(expectedResult, result);
+	
+	}
+
 //Tests for intersects()
 @Test
 public void testIntersectsWithRangeParam() {
