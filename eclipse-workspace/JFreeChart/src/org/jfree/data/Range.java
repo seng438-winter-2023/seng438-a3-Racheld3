@@ -102,6 +102,8 @@ public strictfp class Range implements Serializable {
      * @return The lower bound.
      */
     public double getLowerBound() {
+    	//the following code was commented out as the code is unreachable and will affect
+    	//the result of coverage metrics. This was advised by the TA
 //        if (lower > upper) {
 //            String msg = "Range(double, double): require lower (" + lower
 //                + ") <= upper (" + upper + ").";
@@ -116,6 +118,8 @@ public strictfp class Range implements Serializable {
      * @return The upper bound.
      */
     public double getUpperBound() {
+    	//the following code was commented out as the code is unreachable and will affect
+    	//the result of coverage metrics. This was advised by the TA
 //        if (lower > upper) {
 //            String msg = "Range(double, double): require lower (" + lower
 //                + ") <= upper (" + upper + ").";
@@ -130,6 +134,8 @@ public strictfp class Range implements Serializable {
      * @return The length.
      */
     public double getLength() {
+    	//the following code was commented out as the code is unreachable and will affect
+    	//the result of coverage metrics. This was advised by the TA
 //        if (lower > upper) {
 //            String msg = "Range(double, double): require lower (" + lower
 //                + ") <= upper (" + upper + ").";
