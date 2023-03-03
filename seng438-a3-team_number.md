@@ -93,6 +93,8 @@ Range.combine
 -----------------------------------------
 Data flow graph:
 
+![Screenshot_2023-03-03_at_9 34 59_AM](https://user-images.githubusercontent.com/101215683/222805312-ef9ff8c8-a737-4c51-89c9-cafaffac5b2c.png)
+
 Def-use sets per statement:
 - DEF(238) := {range1, range2}, USE(238) := {}
 - DEF(239) := {}, USE(239) := {range1}
