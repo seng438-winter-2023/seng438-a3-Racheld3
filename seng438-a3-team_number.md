@@ -39,14 +39,29 @@ Def-use sets per statement:
 - DEF(139) := {}, USE(139) := {total}
 
 All DU-pairs per variable:
-- du(1, 1, data) = {1}
-- du(1, 3, data) = {1, 2, 3}
-- du(1, 5, data) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
-- du(1, 5, column) = {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6, 7, 8, 4, 5}
+
+Please note numbers refer to the relative line numbers of the method. 
+
+Data:
+1. du(0, 1, data) = {[0, 1]}
+2. du(0, 3, data) = {[0, 1, 2, 3]}
+3. du(0, 5, data) = {[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5]}
+4. du(0, 11, data) = {[0, 1, 2, 3, 4, 10, 11]}
+
+Column:
+5. du(0, 5, column) = {[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5]}
+6. du(0, 11, column) = {[0, 1, 2, 3, 4, 10, 11]}
+
+//Add other variables?? total, n, r, r2...
 
 
 For each test case show which pairs are covered:
 
+- calculateColumnTotalForTwoValuesFirstColumn(): 1, 2, 3, 5
+- calculateColumnTotalForThreeValuesLastColumn(): 1, 2, 3, 5
+- calculateColumnTotalForOneValue(): 1, 2, 3, 5
+- calculateColumnTotalForNoValues(): 1, 2, 3
+- calculateColumnTotalForInvalidColumn(): 1, 2, 3, 5
 
 Calculate the DU-Pair coverage:
 
@@ -103,7 +118,7 @@ DataUtilities Coverage Achieved
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
-Text…
+EclEmma does not provide a condition coverage metric, so we used analyzed the method coverage. 
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
