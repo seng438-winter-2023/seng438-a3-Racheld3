@@ -214,7 +214,9 @@ Coverage for Method Coverage on Range is 100%:
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
-EclEmma does not provide a condition coverage metric, so we used analyzed the method coverage. 
+EclEmma was very easy to use as it is directly integrated into Eclipse IDE, making test coverage extremely easy to improve. While EclEmma did not provide metrics for condition coverage, it does have the option to show method coverage. While this metric does show which methods in each class under test was missed, it does not provide much more information. This metric may also prove to be redundant as it is very likely that all methods in a class have tests written for them. 
+
+The other two metrics we used were statement/instruction coverage and branch coverage. Statement coverage is great for giving a general sense of how well each class/method was covered. However, it does not provide all information, this includes conditional statements. Statement coverage will consider a line with a conditional state to be "covered" once any of its branches are covered. Because of this, statement coverage may show a misrepresentation of the actual depth of the coverage of a test suite. Branch coverage however does represent the coverage of all possible results of conditional statements in a class under test, creating a deeper understanding of test suite quality. 
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 Requirments based test generation has the advantages of allowing the tester to be more creative in the creation of tests for methods. It is also very simple to create tests with requiremets-based test generation, as the tester just follows the requirements. The disadvatages of requirements-based test generation include a lack of confirmation to the person testing as they are not able to tell how much of the method was tested. 
