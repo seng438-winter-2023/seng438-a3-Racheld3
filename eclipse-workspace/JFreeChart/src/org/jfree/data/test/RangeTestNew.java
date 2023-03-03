@@ -761,11 +761,11 @@ public void testExpandSameLowerAndUpper() {
 //	
 //	
 //	//setup
-//	final Range testRange = new Range(4,10);
-//	double lower = 0.5;
-//	double upper = -2.0;
+//	final Range testRange = new Range(0,10);
+//	double lower = -1.0;
+//	double upper = 0.5;
 //	Range result = Range.expand(testRange, lower, upper);
-//	Range expectedResult = new Range(1,-2);	
+//	Range expectedResult = new Range(7.5,7.5);	
 //	//verify
 //	assertEquals(expectedResult, result);
 //		
