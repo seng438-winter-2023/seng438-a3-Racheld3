@@ -226,7 +226,7 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	
 	//CreateNumberArray(double[]) tests
 	
-	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void testCreateNumberArrayWithNullInput(){
 		double[] testArray = null;
 		createNumberArray(testArray);
@@ -281,7 +281,7 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	
 	//CreateNumberArray2D tests
 	
-	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void testCreateNumberArray2D(){
 		double[][] testArray = null;
 		createNumberArray2D(testArray);
@@ -417,7 +417,7 @@ public class DataUtilitiesTestNew extends DataUtilities {
 		
 	}
 	
-	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void getCumulativePercentagesTestForException(){
 		getCumulativePercentages(null);
 	}
