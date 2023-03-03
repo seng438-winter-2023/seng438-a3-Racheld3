@@ -19,6 +19,8 @@ DataUtilities.calculateColumnTotal
 ---------------------------------------
 Data flow graph:
 
+![Screenshot_2023-03-03_at_9 25 10_AM](https://user-images.githubusercontent.com/101215683/222774328-73f12daa-869b-4351-89b1-c79736a74f57.png)
+
 Def-use sets per statement:
 - DEF(123) := {data, column}, USE(123) := {}
 - DEF(124) := {}, USE(124) := {data}
@@ -120,6 +122,28 @@ Coverage for Branch Coverage on DataUtilities is 87.5%:
 
 Coverage for Method Coverage on DataUtilities is 100%: 
 <img width="974" alt="Screenshot 2023-03-03 at 9 01 51 AM" src="https://user-images.githubusercontent.com/76859857/222768005-3baef5e7-6e40-4131-b370-22df7448ce47.png">
+
+**Initial Range Coverage**
+--------------------------------------------------------------------------
+Initial Coverage for Statement Coverage on Range is 12.7%:
+![image](https://user-images.githubusercontent.com/101215683/222776190-451c8bb7-5f4d-4f7e-b60d-228a8ec280e3.png)
+
+Initial Coverage for Branch Coverage on Range is 9.2%:
+![image](https://user-images.githubusercontent.com/101215683/222776509-e22eb2da-99dc-49d6-b5f0-a833563746f9.png)
+
+Initial Coverage for Method Coverage on Range is 26.1%:
+![image](https://user-images.githubusercontent.com/101215683/222776660-50e381b5-349d-40b8-aab8-2b7fad3cbfae.png)
+
+**Range Coverage Acheived**
+-------------------------------------------------------------------------
+Coverage for Statement Coverage on Range is 99.6%:
+![image](https://user-images.githubusercontent.com/101215683/222777716-32ddb069-210b-4ba0-97b9-f7a13e172711.png)
+
+Coverage for Branch Coverage on Range is 93.4%:
+![image](https://user-images.githubusercontent.com/101215683/222777966-a192858c-f4b8-44c3-af12-63e373f414d1.png)
+
+Coverage for Method Coverage on Range is 100%:
+![image](https://user-images.githubusercontent.com/101215683/222777804-9fc1bedc-ec57-413a-8781-27e25a06af3e.png)
 
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
