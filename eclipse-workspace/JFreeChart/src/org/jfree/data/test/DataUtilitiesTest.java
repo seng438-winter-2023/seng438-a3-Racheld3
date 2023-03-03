@@ -378,7 +378,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		assertArrayEquals(expectedResult, actualResult);
 		
 	}
-	
+ 
 	//looks like method is not taking into account the first value in the table when calculating the sum, 
 	//therefore, the sum becomes 11, and so the percentages are thrown off in the results. For example instead
 	//of 5/16 = 0.3125 it is 5/11 = 0.4545.

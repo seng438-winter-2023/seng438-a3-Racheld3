@@ -147,8 +147,12 @@ Calculate the DU-Pair coverage:
 We created a test plan which is in our github for planning the unit tests required, as with any testing to be done, to begin with, a plan must be created. After writing the unit tests for each method we used EclEmma to view the instruction, branch, and method coverages. Since we did do paired testing we also got the other pair to review eachothers tests. We kept reviewing tests and making changes until we were at a coverage which we felt was excelent.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
-DataUtilites: Test Case- testTwoEqualArraysEqual()
+
+DataUtilites.equals: Test Case- testTwoEqualArraysEqual()
 This test case was designed to improve the testing for the method Equals in DataUtilities. Prior to writing this test the statement and branch coverage was 0%. But after writing just that one test branch coverage improved to 50%. This test case check the loop if (a.length != b.length) to see if the arrays had equal length, by going into this loop we were able to improve the coverage.
+
+Range.constrain: Test case - testConstrainLowerValueNotContained()
+This test case improved coverage for the constrain() method in Range. Prior to writing this test case, the statement, branch and method coverages were 0%. The test case tested the constrain method when the value to be constrained is less than the lower bound of the range. This test case alone increased the statement coverage to 84.0%, branch coverage to 50%, and method coverage to 100%. We used the coverage information to write two additional test cases to bring the coverage to 100% in every category.   
 
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)

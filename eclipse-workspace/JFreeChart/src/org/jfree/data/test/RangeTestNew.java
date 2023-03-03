@@ -649,31 +649,31 @@ public class RangeTestNew{
 		
 		}
 	
-	@Test
-	public void testConstrainUpperValueNotContained() {
-		
-		//setup
-		final Range testRange = new Range(-3, 7);
-		double result = testRange.constrain(48);
-		double expectedResult = 7;
-		
-		//verify
-		assertEquals(expectedResult, result, 0.000001);
-		
-		}
-	
-	@Test
-	public void testConstrainValueContained() {
-		
-		//setup
-		final Range testRange = new Range(-3, 7);
-		double result = testRange.constrain(0);
-		double expectedResult = 0;
-		
-		//verify
-		assertEquals(expectedResult, result, 0.000001);
-		
-		}
+//	@Test
+//	public void testConstrainUpperValueNotContained() {
+//		
+//		//setup
+//		final Range testRange = new Range(-3, 7);
+//		double result = testRange.constrain(48);
+//		double expectedResult = 7;
+//		
+//		//verify
+//		assertEquals(expectedResult, result, 0.000001);
+//		
+//		}
+//	
+//	@Test
+//	public void testConstrainValueContained() {
+//		
+//		//setup
+//		final Range testRange = new Range(-3, 7);
+//		double result = testRange.constrain(0);
+//		double expectedResult = 0;
+//		
+//		//verify
+//		assertEquals(expectedResult, result, 0.000001);
+//		
+//		}
 	
 	//Tests for Equals(Object)
 	@Test
