@@ -11,7 +11,7 @@
 | Isaiah Lemieux            |
 
 # 1 Introduction
-In this lab our group was introduced to application of white-box testing.
+This lab gave us our third opportunity to review and apply the different concepts and practices we have been covering in lectures, in once again, a very hands-on and interactive approach. Our goal was to continue using unit testing, but now building off of the tests created in Assignment 2 for the JFreeChart System. As we were given the code for each of the methods to be tested, this enabled us to use the white-box coverage criteria technique. This lab allowed us to gain exposure to code coverage tools in order to measure test adequacy all while designing test cases that would improve the coverage of our code.
 
 # 2 Manual data-flow coverage calculations for X and Y methods
 
