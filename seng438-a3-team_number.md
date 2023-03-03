@@ -127,8 +127,8 @@ Coverage for Method Coverage on DataUtilities is 100%:
 EclEmma does not provide a condition coverage metric, so we used analyzed the method coverage. 
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
-
-Text…
+Requirments based test generation has the advantages of allowing the tester to be more creative in the creation of tests for methods. It is also very simple to create tests with requiremets-based test generation, as the tester just follows the requirements. The disadvatages of requirements-based test generation include a lack of confirmation to the person testing as they are not able to tell how much of the method was tested. 
+Coverage-based test generation on the other hand has the advantage of the tester being able to confirm how much of the method they are covering with their tests. As well it has an advantage of having metrics to use to measure the improvement of your tests. The disadvantages of coverage-based testing is much more time being required to ensure we are reaching full coverage, and the tester must have a strong understanding of the source code to ensure they are testing all branches.
 
 # 8 A discussion on how the team work/effort was divided and managed
 We divided the manual measure data flow calculations (section 2 of report) by assigning each section of the requirments from the lab handout to one team member then getting other team members to check each others work after completion. We also divided writing unit tests for the test suite development section by Saina to write the org.jfree.data.DataUtilities tests to reach the minimum coverages required, and Rachel, Isaiah and Ana to write the org.jfree.data.Range tests to reach the minimum coverages. Then we swapped and checked over eachother work and as well helped eachother through challenges faced. As well, upon completion of the tests, we helped eachother review the tests, looking for any inconsistencies or defects in the tests.
