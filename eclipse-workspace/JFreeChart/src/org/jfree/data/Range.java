@@ -102,11 +102,11 @@ public strictfp class Range implements Serializable {
      * @return The lower bound.
      */
     public double getLowerBound() {
-        if (lower > upper) {
-            String msg = "Range(double, double): require lower (" + lower
-                + ") <= upper (" + upper + ").";
-            throw new IllegalArgumentException(msg);
-        }
+//        if (lower > upper) {
+//            String msg = "Range(double, double): require lower (" + lower
+//                + ") <= upper (" + upper + ").";
+//            throw new IllegalArgumentException(msg);
+//        }
         return this.lower;
     }
 
@@ -116,11 +116,11 @@ public strictfp class Range implements Serializable {
      * @return The upper bound.
      */
     public double getUpperBound() {
-        if (lower > upper) {
-            String msg = "Range(double, double): require lower (" + lower
-                + ") <= upper (" + upper + ").";
-            throw new IllegalArgumentException(msg);
-        }
+//        if (lower > upper) {
+//            String msg = "Range(double, double): require lower (" + lower
+//                + ") <= upper (" + upper + ").";
+//            throw new IllegalArgumentException(msg);
+//        }
         return this.upper;
     }
 
@@ -130,11 +130,11 @@ public strictfp class Range implements Serializable {
      * @return The length.
      */
     public double getLength() {
-        if (lower > upper) {
-            String msg = "Range(double, double): require lower (" + lower
-                + ") <= upper (" + upper + ").";
-            throw new IllegalArgumentException(msg);
-        }
+//        if (lower > upper) {
+//            String msg = "Range(double, double): require lower (" + lower
+//                + ") <= upper (" + upper + ").";
+//            throw new IllegalArgumentException(msg);
+//        }
         return this.upper - this.lower;
     }
 
