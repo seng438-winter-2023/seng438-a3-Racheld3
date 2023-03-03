@@ -18,7 +18,7 @@ In this lab our group was introduced to application of white-box testing.
 DataUtilities.calculateColumnTotal
 ---------------------------------------
 Data flow graph:
-https://media.discordapp.net/attachments/1070184094668951614/1081251022846042202/Screenshot_2023-03-03_at_9.25.10_AM.png?width=881&height=423
+![Screenshot_2023-03-03_at_9 25 10_AM](https://user-images.githubusercontent.com/101215683/222774328-73f12daa-869b-4351-89b1-c79736a74f57.png)
 
 Def-use sets per statement:
 - DEF(123) := {data, column}, USE(123) := {}
