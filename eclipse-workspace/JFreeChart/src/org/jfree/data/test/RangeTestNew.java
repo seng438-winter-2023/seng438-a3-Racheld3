@@ -756,20 +756,20 @@ public void testExpandSameLowerAndUpper() {
 	
 	}
 
-//@Test
-//public void testExpand() {
-//	
-//	
-//	//setup
-//	final Range testRange = new Range(0,10);
-//	double lower = -1.0;
-//	double upper = 0.5;
-//	Range result = Range.expand(testRange, lower, upper);
-//	Range expectedResult = new Range(7.5,7.5);	
-//	//verify
-//	assertEquals(expectedResult, result);
-//		
-//}
+@Test
+public void testExpand() {
+	
+	
+	//setup
+	final Range testRange = new Range(2,3);
+	double lower = 0;
+	double upper = -5;
+	Range result = Range.expand(testRange, lower, upper);
+	Range expectedResult = new Range(7.5,7.5);	
+	//verify
+	assertEquals(expectedResult, result);
+		
+}
 
 //Tests for expandToInclude()
 @Test
