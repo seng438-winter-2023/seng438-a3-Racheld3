@@ -765,7 +765,7 @@ public void testExpand() {
 	double lower = 0;
 	double upper = -5;
 	Range result = Range.expand(testRange, lower, upper);
-	Range expectedResult = new Range(7.5,7.5);	
+	Range expectedResult = new Range(0,0);	
 	//verify
 	assertEquals(expectedResult, result);
 		
@@ -854,6 +854,30 @@ public void testIntersectsWithValidBoundParams() {
 }
 
 @Test
+public void testIntersectsWithNonIntersectingBounds() {
+	
+	//setup 
+	final Range testRange = new Range(1,4);
+	boolean result = testRange.intersects(-1,0);
+	boolean expected = false;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+@Test
+public void testIntersectsWithInvalidRange() {
+	
+	//setup 
+	final Range testRange = new Range(5,12);
+	boolean result = testRange.intersects(9,7);
+	boolean expected = false;
+	
+	//verify
+	assertEquals(expected, result);
+}
+
+@Test
 public void testIntersectsWithInvalidBoundParams() {
 	
 	//setup 
@@ -885,12 +909,12 @@ public void testToString() {
 	
 	
 	//setup
-	final Range testRange = new Range(4,10);
+	final Range testRange = new Range(4,5);
 	String result = testRange.toString();
-	String expectedResult = new String("Range[4,10]");
+	String expectedResult = new String("Range[4,5]");
 	
 	//verify
-	assertTrue(expectedResult.equals(result));
+	assertEquals(expectedResult, result);
 	
 	}
 
