@@ -112,6 +112,8 @@ Initial Coverage for Method Coverage on DataUtilities is 60%:
 
 DataUtilities Coverage Achieved
 --------------------------------------------------------------------------
+Coverage for Statement Coverage on DataUtilities is 91.7%:
+<img width="945" alt="Screenshot 2023-03-03 at 8 53 55 AM" src="https://user-images.githubusercontent.com/76859857/222766499-155f4a84-b1b1-478e-9559-ba0d59489117.png">
 
 
 
