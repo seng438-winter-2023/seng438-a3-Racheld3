@@ -115,7 +115,11 @@ DataUtilities Coverage Achieved
 Coverage for Statement Coverage on DataUtilities is 91.7%:
 <img width="945" alt="Screenshot 2023-03-03 at 8 53 55 AM" src="https://user-images.githubusercontent.com/76859857/222766499-155f4a84-b1b1-478e-9559-ba0d59489117.png">
 
+Coverage for Branch Coverage on DataUtilities is 87.5%:
+<img width="969" alt="Screenshot 2023-03-03 at 8 58 57 AM" src="https://user-images.githubusercontent.com/76859857/222767490-a3d7388e-2889-46c4-b531-1cb59121d986.png">
 
+Coverage for Method Coverage on DataUtilities is 100%: 
+<img width="974" alt="Screenshot 2023-03-03 at 9 01 51 AM" src="https://user-images.githubusercontent.com/76859857/222768005-3baef5e7-6e40-4131-b370-22df7448ce47.png">
 
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
