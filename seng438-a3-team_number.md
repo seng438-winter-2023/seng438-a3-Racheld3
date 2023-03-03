@@ -52,18 +52,39 @@ Column:
 5. du(0, 5, column) = {[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5]}
 6. du(0, 11, column) = {[0, 1, 2, 3, 4, 10, 11]}
 
-//Add other variables?? total, n, r, r2...
+r:
+7. du(4, 4, r) = {[4]}
+8. du(4, 5, r) = {[4, 5]}
+
+n (in scope of first for loop): 
+9. du(5, 6, n) = {[5, 6]}
+10. du(5, 7, n) = {[5, 7]}
+
+r2: 
+11. du(10, 10, r2) = {[10]}
+12. du(10, 11, r2) = {[10, 11]}
+
+n (in scope of second for loop):
+13. du(11, 12) = {[11, 12]}
+14. du(11, 13) = {[11, 12, 13]}
 
 
 For each test case show which pairs are covered:
 
-- calculateColumnTotalForTwoValuesFirstColumn(): 1, 2, 3, 5
-- calculateColumnTotalForThreeValuesLastColumn(): 1, 2, 3, 5
-- calculateColumnTotalForOneValue(): 1, 2, 3, 5
+Please note these reference the numbers from the above DU-pair list.
+
+- calculateColumnTotalForTwoValuesFirstColumn(): 1, 2, 3, 5, 7, 8, 9, 10
+- calculateColumnTotalForThreeValuesLastColumn(): 1, 2, 3, 5, 7, 8, 9, 10
+- calculateColumnTotalForOneValue(): 1, 2, 3, 5, 7, 8, 9, 10
 - calculateColumnTotalForNoValues(): 1, 2, 3
-- calculateColumnTotalForInvalidColumn(): 1, 2, 3, 5
+- calculateColumnTotalForInvalidColumn(): 1, 2, 3, 5, 7, 8, 9, 10
 
 Calculate the DU-Pair coverage:
+
+    Total DU-pairs: 14
+    DU-pairs covered by tests: 8
+    DU-pair coverage = 8/14
+
 
 
 Range.combine
@@ -84,12 +105,41 @@ Def-use sets per statement:
 
 All DU-pairs per variable:
 
+Please note numbers refer to the relative line numbers of the method. 
+
+range1:
+1. du(0, 1, range1) = {[0, 1]}
+2. du(0, 5, range1) = {[0, 1, 4, 5]}
+3. du(0, 7, range1) = {[0, 1, 2, 3, 7], [0, 1, 4, 5, 6, 7], [0, 1, 4, 6, 7]}
+4. du(0, 8, range1) = {[0, 1, 2, 3, 7, 8], [0, 1, 4, 5, 6, 7, 8], [0, 1, 4, 6, 7, 8]}
+
+range2: 
+5. du(0, 2, range2) = {[0, 1, 2]}
+6. du(0, 4, range2) = {[0, 1, 4]}
+7. du(0, 7, range2) = {[0, 1, 2, 3, 7], [0, 1, 4, 5, 6, 7], [0, 1, 4, 6, 7]}
+8. du(0, 8, range2) = {[0, 1, 2, 3, 7, 8], [0, 1, 4, 5, 6, 7, 8], [0, 1, 4, 6, 7, 8]}
+
+l:
+9. du(7, 9, l) = {[7, 8, 9]}
+
+u:
+10. du(8, 9, u) = {[8, 9]}
 
 
 For each test case show which pairs are covered:
 
+Please note these reference the numbers from the above DU-pair list.
+
+- testCombineWithFirstRangeNull(): 1, 3, 4, 5, 6, 7, 8, 9, 10
+- testCombineWithSecondRangeNull(): 1, 2, 3, 4, 6, 7, 8, 9, 10
+- testCombineWithTwoRanges(): 1, 3, 4, 6, 7, 8, 9, 10
+
 
 Calculate the DU-Pair coverage:
+
+    Total DU-pairs: 10
+    DU-pairs covered by tests: 10
+    DU-pair coverage = 10/10
 
 # 3 A detailed description of the testing strategy for the new unit test
 We created a test plan which is in our github for planning the unit tests required, as with any testing to be done, to begin with, a plan must be created. After writing the unit tests for each method we used EclEmma to view the instruction, branch, and method coverages. Since we did do paired testing we also got the other pair to review eachothers tests. We kept reviewing tests and making changes until we were at a coverage which we felt was excelent.
